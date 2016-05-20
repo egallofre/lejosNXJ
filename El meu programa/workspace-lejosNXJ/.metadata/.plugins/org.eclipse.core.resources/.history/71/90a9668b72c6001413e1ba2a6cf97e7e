@@ -1,0 +1,29 @@
+package edu.soft;
+
+import java.io.*;
+import lejos.nxt.*;
+import lejos.nxt.comm.*;
+
+public class ConectarBT {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 NXTConnection connection = null;
+		 
+		 LCD.drawString("waiting for BT", 0,1 );
+         connection = Bluetooth.waitForConnection();
+ 		 DataInputStream dataIn = connection.openDataInputStream();
+ 		 
+ 		 
+ 		 
+ 		 
+ 		try {
+ 		      
+ 		      System.out.println(dataIn.readInt());
+ 		    } catch (IOException e ) {
+ 		      System.out.println(" write error "+e); 
+ 		    }
+		 
+	}
+
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0077)http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="./Getting Started on Microsoft Windows_files/trackSession.action"></script>
+		
+		
+  <title>Getting Started on Microsoft Windows</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./Getting Started on Microsoft Windows_files/lejos-tutorial.css" type="text/css"><!-- ICONO -->
+  <link rel="shortcut icon" href="http://www.lejos.org/favicon.ico" type="image/x-icon">
+<script src="./Getting Started on Microsoft Windows_files/sf_main.jsp"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/sf_preloader.jsp"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/sf_code.jsp"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/main.js"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/main(1).js"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/base_single_icon.js"></script><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/jquery.min.1.7.1.custom.js"></script><link rel="stylesheet" href="http://www.superfish.com/ws/css/main.css?v=2015.3.12.2.1"><script type="text/javascript" src="./Getting Started on Microsoft Windows_files/sf_allenby.js"></script></head>
+<body>
+<a id="top" name="top"></a>
+<!-- N1: HEADER -->
+<table class="n1t1" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td><img src="./Getting Started on Microsoft Windows_files/tutorial_header1.jpg"></td>
+      <td align="right"><img src="./Getting Started on Microsoft Windows_files/tutorial_header2.jpg"></td>
+    </tr>
+  </tbody>
+</table>
+<!-- N2: CONTENTS -> NAVIGATION SYSTEMS AND CONTENTS -->
+<table class="n2t1" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td class="n2t1r1c1">
+      <div class="nolinkLESSON">Getting Started on Microsoft Windows</div>
+      <div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#1">Prerequisites</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#2">Java Development Kit</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#3">USB Driver</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#4">Bluetooth Stack</a></div>
+      <div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#5">Downloading the software</a></div>
+      <div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#6">Running the GUI Installer</a></div>
+      <div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#7">Manual installation</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#8">Unzipping the release</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#9">Setting up environment variables</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#10">Using a Command Window</a></div>
+      <div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#11">Flashing the firmware</a></div>
+      <div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#12">Testing your Installation</a></div>
+      </td>
+      <td>
+        <div id="BreadCrumbs">
+            <a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm" target="_top">Home Page</a>&gt;
+            <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#">Getting Started on Microsoft Windows</a>
+        </div>
+      <div class="NavBit"> <a target="_top" href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/Intro.htm">«&nbsp;Previous</a>&nbsp;•&nbsp;
+      <a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm">TOC</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/FirstProgram.htm">Next&nbsp;»</a> </div>
+      <div id="PageTitle">Getting Started on Microsoft Windows</div>
+      <p>This version of the tutorial is for the 0.9 release of leJOS NXJ. </p>
+      
+      <a id="1" name="1"></a>
+      <h4>Prerequisites</h4>
+      
+      <a id="2" name="2"></a>
+      <h5>Java Development Kit</h5>     
+      <p>You will also need a Java Development Kit (JDK) on your PC. 
+      Note that a Java Runtime Environment (JRE) is not sufficient 
+      as it does not allow you to compile Java programs. You can download
+      the latest JDK from <a href="http://www.oracle.com/technetwork/java/javase/downloads/" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/</a>.
+      Follow the instructions for installing it. leJOS NXJ has been
+      tested with JDK versions 1.5, 1.6, and 1.7, and will not work with earlier
+      versions. JDK 1.6 or 1.7 is recommended.</p>
+      <p>leJOS NXJ only works with 32-bit version of the JDK and JRE, so even if you have a 64-bit system,
+      you should select a 32-bit version of the JDK.</p>
+      
+      <a id="3" name="3"></a>
+      <h5>USB Driver</h5>     
+      <p>To run leJOS NXJ on Microsoft Windows you will need a suitable USB driver on your PC. 
+      If you have installed the standard LEGO Mindstorms NXT-G software, a suitable driver (the so-called Fantom driver) is already installed. 
+      If you do not wish to install the LEGO software on your PC or if you want to update the Fantom driver to the latest version,
+      you can get an installer from <a href="http://mindstorms.lego.com/en-us/support/files/Driver.aspx" target="_blank">The LEGO Mindstorms site</a>.
+      It is strongly recommended to update to the latest version (1.1.3 at the time of writing).</p>
+      <p>It has come to our attention, that NXT-G as well as the Fantom driver don't install under Windows 7 Starter Edition.
+      This can be worked around by adding a line to the setup.ini file.
+      <a href="http://digital.ni.com/public.nsf/allkb/1817F501D7BA67F28625768F0000B260">Here</a> you find the official instructions
+      by National Instruments, the authors of NXT-G and the Fantom driver. In short, you have to add <code>AllowWindowsStarter=1</code>
+      to the [OS]-section of the setup.ini file.</p>
+
+      <a id="4" name="4"></a>
+      <h5>Bluetooth Stack</h5> 
+      <p> If you want to communicate with the NXT over Bluetooth, you will need a Bluetooth dongle or built-in support on your PC, 
+      and a Bluetooth software stack. leJOS NXJ has been tested with the Microsoft and Widcomm stacks, but might also work with others. 
+      Bluesoleil is known to cause problems. You can use leJOS NXJ without Bluetooth.</p>
+      <p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#top">Back to top</a></p>
+      
+      <a id="5" name="5"></a>
+      <h4>Downloading the software</h4> 
+      <p>You can download the leJOS NXJ software from <a href="http://www.lejos.org/nxj-downloads.php" target="_blank">
+      The leJOS NXJ download page</a>.</p>
+      <p>It is recommended that you use the Windows installer, but there is a ZIP file release that you can use if you prefer to do a manual installation.</p>
+      <p> <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#top">Back to top</a> </p>
+      <a id="6" name="6"></a>
+      
+      
+      <h4>Running the GUI installer</h4>
+      <p>Download <code>leJOS_NXJ_0.9.1beta_win32_setup.exe</code>.
+      Note that Inno Setup is the open source software we have used to produce the installer.
+      Run the installer and you will see the following screen:
+      </p>
+      <img src="./Getting Started on Microsoft Windows_files/install01welcome.png" has_inimg="true"><div style="height: 115px; float: none;"></div>
+      <p>Click "Next". Note, that at this point the installer will check whether the installed
+      fantom driver is up-to-date. The installer will report an error if that is not the case
+      and you can chose whether the open the <a href="http://mindstorms.lego.com/en-us/support/files/Driver.aspx" target="_blank">Fantom driver download page</a> or to continue without installing or updating
+      the Fantom driver. In the latter case, USB communication with the NXT might not work properly.
+      If the installation continues, you will see the next page of the installer:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install02jdk.png">
+      <p>This page asks you to select the root folder of a 32 Bit Java Development Kit (JDK).
+      You cannot continue the installation process without doing so. If none is installed,
+      click the Download JDK button, download and installa a 32 Bit JDK and restart the installer.
+      The selected folder will be assigned to the <em>LEJOS_NXT_JAVA_HOME</em> environment variable
+      automatically at the end of the installation process.</p>
+      <p>The next step is to select the destination directory, in which leJOS will be installed:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install03dir.png">
+      <p>You can change the destination if you need to. Click on the "Browse" button
+      to change the destination. On the next page, you can chose which components to install:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install04comp.png">
+      <p>It is usually not necessary to modify these. However, you may chose to omit the documentation
+      (it is also available online) or you may chose to install any of the additional sources.
+      The Sample and Example Projects are also contained in the <em>samples.zip</em> that is part
+      of the leJOS Development Kit. The Sources of the leJOS Development Kit can be used
+      to modify and rebuild leJOS it self. It is usually not needed, if you only plan on
+      developing programs based on leJOS and do not plan to modify components of leJOS itself.
+      All additional sources are also available as a seperate download.
+      If any additional sources have been selected, the destination directories for them
+      can be changed on the next page.</p>
+      <img src="./Getting Started on Microsoft Windows_files/install05dirs.png">
+      <p>Note, that this page is skipped if no additional sources have been selected.
+      The next page allows to adjust the folder in the start menu, that the leJOS
+      shortcuts will be installed to:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install06menu.png">
+      <p>The next page shows a summary of your choices:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install07summary.png">
+      <p>The installation will start, if you click "Install". Note, that at this point
+      the installer checks for any previous installs of leJOS. If any are found,
+      their uninstaller is started. You cannot proceed with the installation
+      without uninstalling the previous version.</p>
+      <img src="./Getting Started on Microsoft Windows_files/install08progress.png">
+      <p>After the installation complete, the following page will appear:</p>
+      <img src="./Getting Started on Microsoft Windows_files/install09finish.png">
+      <p>Uncheck "Launch NXJ Flash utility" if you don't want to start the graphical
+      version of nxjflash, which allows you to upload the leJOS firmware onto the NXT
+      brick. The leJOS firmware is needed to run any Java programs on the NXT. So it is
+      recommened to run nxjflash. Note, that it is possible to revert to the original
+      Lego firmware later.</p>
+      
+      <p>If you chose to NXJ Flash, you will see:</p>
+
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashg.jpg">
+      
+      <p>Click "Start Program" and you will be asked:</p>
+      
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashgconnected.jpg">
+      
+      <p>Click OK and you will be asked:</p>
+      
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashgerase.jpg">
+      
+      <p>If you select "Yes" all current files on the NXT are erased. It is a good idea to select this
+      as old .nxj files may not work with the new firmware.</p>
+      
+      <p> You will then see:</p>
+      
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashgconnected.jpg">
+      
+      <p>Make sure that your NXT is connected to the PC by the USB cable and witched on. Then press "OK" and
+      you should see some progess messages, such as:</p>
+      
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashgprogress.jpg">
+      
+      <p>When your NXT has been updated, you will be asked:</p>
+      
+      <img src="./Getting Started on Microsoft Windows_files/nxjflashgagain.jpg">
+      
+      <p>If you have more NXTs to update, click "Yes". When you have finished click "No" and the flash utility will
+      terminate and then the installer will terminate, and you are done.</p>
+      
+      <p> Skip to the section below on testing your installation.</p>
+      
+      <p> <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#top">Back to top</a> </p>
+      <a id="7" name="7"></a>
+      
+      
+      <h4>Manual installation</h4>
+      <p>If you have been using the GUI installer, skip this section and go to "Testing the Installation".
+      This section described the manual install without the GUI installer.</p>
+      
+      <a id="8" name="8"></a>
+      <h5>Downloading and Unzipping</h5>
+      <p>Download the file called <code>leJOS_NXJ_0.9.1beta_win32.zip</code> and unzip it to a location of
+      your choice, e.g. C:\leJOS_NXJ.</p>
+      
+      <a id="9" name="9"></a>
+      <h5>Setting up environment variables</h5>
+      <p>leJOS NXJ needs to know the locations of java.exe and javac.exe. There are several possibilities
+      to achieve that: (1) add the bin directory of the JDK to your <em>PATH</em> environment variable
+      so that commands such as <code>java</code> and <code>javac</code> can be called from a command prompt
+      or (2) set the <em>LEJOS_NXT_JAVA_HOME</em> environment variable to the directory of an installed JDK.
+      Note that you can use <em>JAVA_HOME</em> instead of LEJOS_NXT_JAVA_HOME, however setting JAVA_HOME might
+      intefere with other applications.</p>
+      <p>Furthermore, the <em>NXJ_HOME</em> variable should be set to the directory where leJOS NXJ
+      is installed. It allows other applications, e.g. the Ant scripts, to locate the leJOS
+      Development Kit. Also, for easy exececution of the leJOS commands on the command line,
+      the bin folder of the leJOS distribution should be added to the <em>PATH</em> variable.</p>
+      
+      <p>Examples:</p>
+      <table border="1">
+        <tbody>
+          <tr>
+            <td><b>Variable</b></td>
+            <td><b>Value</b></td>
+            <td><b>Examples</b></td>
+          </tr>
+          <tr>
+            <td>NXJ_HOME</td>
+            <td>The folder you installed leJOS NXJ into</td>
+            <td>C:\leJOS_NXJ</td>
+          </tr>
+          <tr>
+            <td>LEJOS_NXT_JAVA_HOME</td>
+            <td>The folder where you installed the 32 Bit JDK </td>
+            <td>C:\Program Files\Java\jdk1.7.0_02<br>
+            C:\Program Files (x86)\Java\jdk1.7.0_02</td>
+          </tr>
+          <tr>
+            <td>PATH</td>
+            <td>Prepend the bin of the leJOS Development Kit</td>
+            <td>C:\leJOS_NXJ\bin;%PATH%</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <p>The Windows installer will automatically sets all three
+      environment variables for you. Setting them manually is only required during manual installation.
+      You can set these environment variables manually by going to Control Panel &gt; System &gt; Advanced &gt; Environment
+      Variables and creating them or editing existing values. You can set them either as user or system variables 
+      depending on whether you want leJOS NXJ to be available to all users or just the current user.</p>
+      
+      <a id="10" name="10"></a>
+      <h5>Using a Command Window</h5>
+      <p>You will need to run command-line commands to test your installation and optionally to flash the firmware. If you plan to use IDE such as Eclipse or Netbeans, 
+      once you have installed your IDE, you should not need to use the command window any more.</p>
+      <p> You can start a command window on Windows XP by Start &gt; Run and typing cmd. On Vista or Windows 7, type "Command Prompt".</p>
+      <p>Type <code>set</code> to list environment variables and check they are all set up correctly.</p>
+      
+      <a id="11" name="11"></a>
+      <h5>Flashing the Firmware</h5>
+      <p>As leJOS NXJ is a firmware replacement, you will need to flash the firmware to your NXT. 
+      Note that this will overwrite any existing firmware. If you have the standard LEGO firmware or other third-party firmware on your NXT, existing files will be lost.
+      However, it is possible to revert to the original Lego firmware either by using the
+      Software provided by Lego or by using nxjflash.</p>
+      <p>The 0.9.0 release increases the amount of flash memory used by the firmware and the startup menu,
+      so the first time you flash this version of the firmware, existing leJOS NXJ files will be deleted.</p>
+      <p>Make sure your NXT is attached to the PC via USB cable and switch it on by pressing the orange button.
+      Open a command line prompt (as described above) and either type the command
+      <code>nxjflash</code> or <code>nxjflashg</code> followed by hitting the Enter key.
+      The latter starts the GUI version of nxjflash.</p> 
+      
+      <p>If you chose <code>nxjflash</code> to flash the leJOS NXJ firmware, you will see
+      some messages on your command window.
+      If the NXT brick is already in firmware update mode (it makes a ticking noise), then
+      the firmware will be uploaded immediately. Otherwise, if your NXT has a previous version of
+      the leJOS or LEGO firmware on it, a list of the NXTs connected to the USB will be shown 
+      and you will be asked to input the number in the list of the NXT you want updated - this will
+      be 1 if a single NXT is connected to your PC. After the flashing procedure has finished, you
+      should see the leJOS logo on your NXT and hear the leJOS startup sound.
+      If your NXT has other firmware on it, or if <code>nxjflash</code> fails, you must manually
+      put your NXT into firmware update mode. Press the reset button (at the back of the NXT,
+      hidden in the hole near the USB port) for more than 4 seconds. A straightened paper clip could
+      be useful for this. Your NXT will audibly tick when it is firmware update mode. 
+      Then try <code>nxjflash</code> again.</p>
+      
+      <p>If you chose <code>nxjflashg</code>, the GUI version of nxjflash will start.
+      Instead of typing the command on the command line, you can also double click nxjflashg.bat
+      in the bin folder of the leJOS Development Kit. When the program window opens,
+      click on Start Program and follow the instructions. 
+      A more complete explanation is in the <a href="http://www.lejos.org/nxt/nxj/tutorial/PC_GUI/PCGUITools.htm">PC GUI Tools</a>
+      tutorial page.</p>
+      
+      <p> <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#top">Back to top</a> </p>
+      
+      <a id="12" name="12"></a>
+      <h4>Testing your Installation</h4>
+      <p>You can test your installation by following the steps for writing your first leJOS Program
+      which are the <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/FirstProgram.htm">next part</a> of this tutorial.</p>
+      
+      <p> <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/GettingStartedWindows.htm#top">Back to top</a> </p>
+      <div class="NavBit"> <a target="_top" href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/Intro.htm">«&nbsp;Previous</a>&nbsp;•&nbsp;
+      <a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm">TOC</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/FirstProgram.htm">Next&nbsp;»</a> </div>
+      <br>
+      </td>
+      <td> <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div><div id="SL_button" class="ImTranslatorLogo" style="display: none; background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/imtranslator-s.png);"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator" style="display: none;"><div id="SL_planshet" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg2.png) rgb(244, 245, 245);"><div id="SL_TB"><div id="bubblelogo" class="ImTranslatorLogo" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/imtranslator-s.png);"></div><table cellspacing="1" border="0" id="SL_tables"><tbody><tr><td class="SL_td" align="right" width="10%"><input id="SLloc" type="checkbox" title="Lock-in language"></td><td class="SL_td" align="left" width="20%"><select id="SL_lng_from"><option selected="" value="auto">Detect language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Belarusian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-CN">Chinese&nbsp;(Simp)</option><option value="zh-TW">Chinese&nbsp;(Trad)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian&nbsp;Creole</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="kn">Kannada</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="ms">Malay</option><option value="mt">Maltese</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option></select></td><td class="SL_td" align="center" width="3"><div id="SL_switch" title="Switch languages" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/switchb.png);"></div></td><td class="SL_td" align="left" width="20%"><select id="SL_lng_to"><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Belarusian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-CN">Chinese&nbsp;(Simp)</option><option value="zh-TW">Chinese&nbsp;(Trad)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian&nbsp;Creole</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="kn">Kannada</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="ms">Malay</option><option value="mt">Maltese</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option selected="" value="es">Spanish</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option></select></td><td class="SL_td" width="13%" align="center">&nbsp;</td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Listen to the translation" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/tts-voice.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Select text" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/copy_hand.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch" onclick="alert(&#39;Not available for dictionary&#39;);"></div><div id="SL_bbl_font" title="Font size" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/font-off.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_TH" title="Translation history" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/history.png);"></div></td><td class="SL_td" width="5%"></td><td class="SL_td" width="8%" align="right"><div id="SL_pin" title="Pin pup-up bubble" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/pin-off.png);"></div></td></tr></tbody></table></div></div><div id="SL_shadow_translation_result" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg.png) rgb(255, 255, 255);"></div><div id="SL_bbl_donate" title="Make a small contribution" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/donate2.png);"></div><div id="SL_Balloon_options" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg3.png) rgb(244, 245, 245);"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/options-bbl.html" target="_blank" class="SL_options" title="Show options">Options</a>&nbsp;:&nbsp;<a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/history.html" class="SL_options" title="Translation history" target="_blank">History</a>&nbsp;:&nbsp;<a href="http://about.imtranslator.net/tutorials/presentations/imtranslator-for-chrome/chrome-bubble-translator/" target="_blank" class="SL_options" title="ImTranslator Help">Help</a>&nbsp;:&nbsp;<a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/feedback.html" class="SL_options" title="Feedback" target="_blank">Feedback</a></div><div id="SL_player"></div><div id="SL_alert100" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg2.png);">Text-to-speech function is limited to 100 characters</div></div></div><iframe src="./Getting Started on Microsoft Windows_files/userData.html" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe><iframe src="./Getting Started on Microsoft Windows_files/register_server_layer.html" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg><div id="SF_VISUAL_SEARCH" class="__visualwww visualwww_full_ui"><div id="SF_FULL_UI_ARROW"></div><div id="SF_DRAGGABLE_1"></div><a href="javascript:visualwww.util.bCloseEvent(document.getElementById("infoBtn"), 2);" class="partner_logo_link">FVD Suggestions</a><div id="infoBtn" hidden="1" onmouseover="visualwww.util.bCloseEvent(this, 1);" onmouseout="visualwww.util.bCloseEvent(this, 0);" onclick="visualwww.util.bCloseEvent(this, 2);"></div><div id="SF_CloseButton" onmouseout="visualwww.util.bCloseEvent(this,0)" onmouseover="visualwww.util.bCloseEvent(this,1)"><div class="tooltip">Close</div></div><iframe id="SF_PLUGIN_CONTENT" allowtransparency="true" src="./Getting Started on Microsoft Windows_files/plugin_w.html" scrolling="yes" frameborder="0" style="width: 557px; height: 446px;"></iframe><div id="SF_INFO_TOOLTIP"></div><div id="SF_INFO_CLOSE" onclick="visualwww.util.bCloseEvent(this, 2);"></div></div><div id="SF_ScreenLayout" style="z-index: 1989995; width: 100%; height: 100%; left: 0px; top: 0px; position: fixed; display: none; opacity: 0.01; background: white;"></div><div id="visualwww_inimg_0" class="__visualwww visualwww_inimg generic generic " style="left:250px; top:1329.3125px;"><div class="container"><div class="explore_button _open_full_ui" style="height:100px; background-image: url(&#39;http://www.superfish.com/ws/images/inimg2/explore_es.png&#39;);" data-report-action="explore click"><div class="label"></div></div><div class="item  _merchant_click" data-merchant-url="http://www.superfish.com/ws/offerURL.action?itemId=-8799412518194496512&amp;userid=20a5698b-64b5-e0cf-4ea6-6d2d4cf94707-842&amp;sessionid=20a56123201518745-419-3111&amp;dlsource=dnmrlsp&amp;merchantName=lejos.org&amp;resType=KELKOO&amp;price=123,98 €&amp;identical=0&amp;position=0.1&amp;br=ch&amp;firstCardType=KELKOO&amp;slideUP=2&amp;pageType=NA&amp;siteType=pip&amp;categoryId=12094&amp;imageURL=http%3A%2F%2Fr.kelkoo.com%2Fr%2Fes%2F13757713%2F117001%2F90%2F90%2Fhttps%253A%252F%252Fwww.worten.es%252Fmedia%252Fcatalog%252Fproduct%252Fcache%252F2%252Fimage%252F500x375%252F9df78eab33525d08d6e5fb8d27136e95%252F5%252F3%252F5322315.jpg%2FSHAAVfXWgySPPNNrpXY2xG.F_mqKmOblWjN.aPzdX9I-&amp;language=es&amp;CD_CTID=suggest&amp;tier1_bucket=&amp;tier1_curr_group=270&amp;tier1_next_group=916&amp;tier1_prev_group=848&amp;tier2_bucket=&amp;tier2_curr_group=561&amp;tier2_next_group=815&amp;tier2_prev_group=923"><div class="thumb_link" style="width:100px; height:100px;"><img src="./Getting Started on Microsoft Windows_files/SHAAVfXWgySPPNNrpXY2xG.F_mqKmOblWjN.aPzdX9I-" sfimgevt="-1" sfnoicon="1"></div><div class="thumb_label"><span></span></div><div class="thumb_star star_0"></div><div class="price_link">123,98 €</div><div class="item_info" style="left:-32.5px"><div class="item_info_tip"><div></div></div><div class="item_info_inner"><div class="image"><img src="./Getting Started on Microsoft Windows_files/SHAAVfXWgySPPNNrpXY2xG.F_mqKmOblWjN.aPzdX9I-" title="Microsoft Software  Windows 8.1" sfimgevt="-1" sfnoicon="1"></div><div class="item_info_label" style=""></div><div class="stars star_0"><div></div></div><div class="itemDetails"><p class="brand">Microsoft Software  Windows 8.1</p><div class="merch_data"><span class="price">123,98 €</span> <span class="store" title="Worten">@ Worten</span></div><div class="visitStore" style="width:88px">Visitar la Tienda</div></div></div></div></div><div class="item  _merchant_click" data-merchant-url="http://www.superfish.com/ws/offerURL.action?itemId=-6723490776656095232&amp;userid=20a5698b-64b5-e0cf-4ea6-6d2d4cf94707-842&amp;sessionid=20a56123201518745-419-3111&amp;dlsource=dnmrlsp&amp;merchantName=lejos.org&amp;resType=KELKOO&amp;price=125,01 €&amp;identical=0&amp;position=0.2&amp;br=ch&amp;firstCardType=KELKOO&amp;slideUP=2&amp;pageType=NA&amp;siteType=pip&amp;categoryId=12094&amp;imageURL=http%3A%2F%2Fr.kelkoo.com%2Fr%2Fes%2F11659513%2F117001%2F90%2F90%2Fhttps%253A%252F%252Fwww.senetic.es%252Fi%252Fnorm%252Fg%252F15533061-4917.jpg%2FjVn7UZJ6cFwyyJZewIfS1dzZUIiu5A_ma9WGLH6X_9k-&amp;language=es&amp;CD_CTID=suggest&amp;tier1_bucket=&amp;tier1_curr_group=270&amp;tier1_next_group=916&amp;tier1_prev_group=848&amp;tier2_bucket=&amp;tier2_curr_group=561&amp;tier2_next_group=815&amp;tier2_prev_group=923"><div class="thumb_link" style="width:100px; height:100px;"><img src="./Getting Started on Microsoft Windows_files/jVn7UZJ6cFwyyJZewIfS1dzZUIiu5A_ma9WGLH6X_9k-" sfimgevt="-1" sfnoicon="1"></div><div class="thumb_label"><span></span></div><div class="thumb_star star_0"></div><div class="price_link">125,01 €</div><div class="item_info" style="left:-32.5px"><div class="item_info_tip"><div></div></div><div class="item_info_inner"><div class="image"><img src="./Getting Started on Microsoft Windows_files/jVn7UZJ6cFwyyJZewIfS1dzZUIiu5A_ma9WGLH6X_9k-" title="Microsoft Windows 8 32-bit, 1 Pc, Dvd, Oem, Español" sfimgevt="-1" sfnoicon="1"></div><div class="item_info_label" style=""></div><div class="stars star_0"><div></div></div><div class="itemDetails"><p class="brand">Microsoft Windows 8 32-bit, 1 Pc, Dvd, Oem, Español</p><div class="merch_data"><span class="price">125,01 €</span> <span class="store" title="Senetic">@ Senetic</span></div><div class="visitStore" style="width:88px">Visitar la Tienda</div></div></div></div></div><div class="item  _merchant_click" data-merchant-url="http://www.superfish.com/ws/offerURL.action?itemId=-6771700225659849728&amp;userid=20a5698b-64b5-e0cf-4ea6-6d2d4cf94707-842&amp;sessionid=20a56123201518745-419-3111&amp;dlsource=dnmrlsp&amp;merchantName=lejos.org&amp;resType=KELKOO&amp;price=170,18 €&amp;identical=0&amp;position=0.3&amp;br=ch&amp;firstCardType=KELKOO&amp;slideUP=2&amp;pageType=NA&amp;siteType=pip&amp;categoryId=12094&amp;imageURL=http%3A%2F%2Fr.kelkoo.com%2Fr%2Fes%2F11659513%2F117001%2F90%2F90%2Fhttps%253A%252F%252Fwww.senetic.es%252Fi%252Fnorm%252Fg%252F15532919-1879.jpg%2FJNszJXO7tq6fYqPllQDPPEUnieC4NZF.a.7BBkh8oBk-&amp;language=es&amp;CD_CTID=suggest&amp;tier1_bucket=&amp;tier1_curr_group=270&amp;tier1_next_group=916&amp;tier1_prev_group=848&amp;tier2_bucket=&amp;tier2_curr_group=561&amp;tier2_next_group=815&amp;tier2_prev_group=923"><div class="thumb_link" style="width:100px; height:100px;"><img src="./Getting Started on Microsoft Windows_files/JNszJXO7tq6fYqPllQDPPEUnieC4NZF.a.7BBkh8oBk-" sfimgevt="-1" sfnoicon="1"></div><div class="thumb_label"><span></span></div><div class="thumb_star star_0"></div><div class="price_link">170,18 €</div><div class="item_info" style="left:-32.5px"><div class="item_info_tip"><div></div></div><div class="item_info_inner"><div class="image"><img src="./Getting Started on Microsoft Windows_files/JNszJXO7tq6fYqPllQDPPEUnieC4NZF.a.7BBkh8oBk-" title="Microsoft Windows 8 Pro De 64 Bits, Oem, Dvd, Español" sfimgevt="-1" sfnoicon="1"></div><div class="item_info_label" style=""></div><div class="stars star_0"><div></div></div><div class="itemDetails"><p class="brand">Microsoft Windows 8 Pro De 64 Bits, Oem, Dvd, Español</p><div class="merch_data"><span class="price">170,18 €</span> <span class="store" title="Senetic">@ Senetic</span></div><div class="visitStore" style="width:88px">Visitar la Tienda</div></div></div></div></div><div class="item  _merchant_click" data-merchant-url="http://www.superfish.com/ws/offerURL.action?itemId=-1022205552424600576&amp;userid=20a5698b-64b5-e0cf-4ea6-6d2d4cf94707-842&amp;sessionid=20a56123201518745-419-3111&amp;dlsource=dnmrlsp&amp;merchantName=lejos.org&amp;resType=TWENGA&amp;price=349,22 €&amp;identical=0&amp;position=0.4&amp;br=ch&amp;firstCardType=KELKOO&amp;slideUP=2&amp;pageType=NA&amp;siteType=pip&amp;categoryId=12094&amp;imageURL=http%3A%2F%2Fi50.twenga.com%2F0-tp_6178077074358222284vb.jpg&amp;language=es&amp;CD_CTID=suggest&amp;tier1_bucket=&amp;tier1_curr_group=270&amp;tier1_next_group=916&amp;tier1_prev_group=848&amp;tier2_bucket=&amp;tier2_curr_group=561&amp;tier2_next_group=815&amp;tier2_prev_group=923"><div class="thumb_link" style="width:100px; height:100px;"><img src="./Getting Started on Microsoft Windows_files/0-tp_6178077074358222284vb.jpg" sfimgevt="-1" sfnoicon="1"></div><div class="thumb_label"><span></span></div><div class="thumb_star star_0"></div><div class="price_link">349,22 €</div><div class="item_info" style="left:-32.5px"><div class="item_info_tip"><div></div></div><div class="item_info_inner"><div class="image"><img src="./Getting Started on Microsoft Windows_files/0-tp_6178077074358222284vb.jpg" title="Microsoft Windows Multipoint Server Premium Software Assurance Government Open 1 License No Level" sfimgevt="-1" sfnoicon="1"></div><div class="item_info_label" style=""></div><div class="stars star_0"><div></div></div><div class="itemDetails"><p class="brand">Microsoft Windows Multipoint Server Premium Software Assurance Government Open 1 License No Level</p><div class="merch_data"><span class="price">349,22 €</span> <span class="store" title="Senetic">@ Senetic</span></div><div class="visitStore" style="width:88px">Visitar la Tienda</div></div></div></div></div><div class="more_button _open_full_ui" style="height:100px" data-report-action="full slideup"><div class="arrow"></div><div class="label">Más</div><div class="x _hide_inimg" title="Close"></div><div class="question_mark _show_info" title="Info"></div></div><div class="partner_title _show_info">By FVD Suggestions</div></div></div><div id="SF_SA_INFO" style="display:none;z-index:1990000;-moz-user-select: none;-khtml-user-select:none;user-select:none;width:324px;height:394px; background: transparent;">    <div class="header" style="width: 324px;background-color: transparent;height: 25px;background: url(http://www.superfish.com/ws/images/bgp.png) -1094px 0 transparent;"><div onmouseout="SF.infoEvent(this, 0);" onmouseover="SF.infoEvent(this, 1);" onclick="SF.infoEvent(this, 2);" id="infoClose"></div><div class="closeButton" style="width:19px;height:19px;background: url(http://www.superfish.com/ws/images/bClose.png) 0 0 no-repeat;position:absolute;top:3px;right:4px;cursor:pointer;"></div></div>   <iframe id="SF_SA_INFO_CONTENT" allowtransparency="true" src="about:blank" style="z-index:200005;width:323px;height:345px;overflow-x: hidden;overflow-y: hidden;top:25px;left:0;padding:0;position:absolute; background: url(http://www.superfish.com/ws/images/bgp.png) repeat-y scroll -1742px 0 transparent;" scrolling="yes" frameborder="0"></iframe><div class="footer" style="height: 35px;width: 324px;bottom: 0;background-color: transparent;background: url(http://www.superfish.com/ws/images/bgp.png) -1418px 0 transparent;position:absolute; top:350ox;"></div></div></body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0069)http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		
+	<link rel="stylesheet" href="./Compiling and Running Programs_files/lejos-tutorial.css" type="text/css"><!-- ICON -->
+	<link rel="shortcut icon" href="http://www.lejos.org/favicon.ico" type="image/x-icon">		
+	<title>Compiling and Running Programs</title>
+	<meta name="AUTHOR" content="Roger Glassey">
+	<meta name="AUTHOR" content="Lawrie Griffiths">
+<script src="./Compiling and Running Programs_files/sf_main.jsp"></script><script type="text/javascript" src="./Compiling and Running Programs_files/sf_preloader.jsp"></script><script type="text/javascript" src="./Compiling and Running Programs_files/sf_code.jsp"></script><script type="text/javascript" src="./Compiling and Running Programs_files/main.js"></script><script type="text/javascript" src="./Compiling and Running Programs_files/main(1).js"></script><script type="text/javascript" src="./Compiling and Running Programs_files/base_single_icon.js"></script><script type="text/javascript" src="./Compiling and Running Programs_files/jquery.min.1.7.1.custom.js"></script><link rel="stylesheet" href="http://www.superfish.com/ws/css/main.css?v=2015.3.12.2.1"></head>
+<body>
+	<a id="top" name="top"></a>
+	<!-- N1: HEADER -->
+	<table class="n1t1" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td><img src="./Compiling and Running Programs_files/tutorial_header1.jpg"></td>
+			<td align="right"><img src="./Compiling and Running Programs_files/tutorial_header2.jpg"></td>
+		</tr>
+	</tbody></table>
+	<!-- N2: CONTENTS -> NAVIGATION SYSTEMS AND CONTENTS -->
+	<table class="n2t1" cellpadding="0" cellspacing="0">
+		<tbody><tr>
+			<td class="n2t1r1c1">
+				<div class="nolinkLESSON">Compiling and Running Programs </div>
+				<div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#1">Using the leJOS NXJ command line tools</a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#2">nxjc – compile  a program</a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#3">nxjlink – link a program</a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#4">nxjupload – upload a program</a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#5">nxj – link, upload and run a program</a></div>
+				<div class="linkAHEAD"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#6">Using PC API command line tools</a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#7">nxjpcc – compile a PC API program </a></div>
+				<div class="linkAHEAD2"><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#8">nxjpc – run a PC API program  </a></div>
+			</td>
+			<td>
+				<!-- DO NOT MANINPULATE -->
+        		<div id="BreadCrumbs">
+            		<a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm" target="_top">Home Page</a> &gt; <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#">Compiling and Running NXJ programs</a>
+
+        		</div>
+        		<div class="NavBit">
+                	<a target="_top" href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/FirstProgram.htm">«&nbsp;Previous</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm">TOC</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/UsingIDEs.htm">Next&nbsp;»</a>
+        		</div>
+				<div id="PageTitle">Compiling and Running Programs</div>
+				
+				<p><a href="http://science.webhostinggeeks.com/kompajlovanje-i-pokretanje">Serbo-Croatian translation</a> thanks to Jovana Milutinovich.</p>
+				
+				<p>This section describes how to compile and run leJOS NXJ programs.</p>
+				
+				<p>Most people will want to write Java programs that run on the NXT brick, but that is not the only option. leJOS NXJ
+				also supports programs that run on the PC and control a NXT robot remotely. Such PC programs can control a NXT robot
+				running the leJOS NXJ menu. They can also remotely control a robot running the standard LEGO firmware. An even more
+				interesting option that leJOS NXJ supports is to write a program that runs partly on the NXT and partly on a PC  with the two parts communicating
+				with each other over Bluetooth or USB. The part of your program that runs on the PC has more memory and processing power available
+				to it and can do more complex processing. It can also display interesting user interfaces such as maps of where your robot
+				is exploring. The part of the program that runs on the NXT can respond quickly to sensors and can accurately control motors. If you are interested in writing PC programs see the <a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#6">PC API command line tools</a> section below.</p>
+				
+				<p>While we are on the subject, it is also worth mentioning that leJOS NXJ programs can also run on mobile 
+				phones or other devices that support the Java MicroEdition Environment (JME). Such programs can communicate with the NXT over
+				Bluetooth. We plan to add a section to the tutorial soon that will describe how to develop programs that use the leJOS NXJ JME API.</p>
+				
+				<p>You can also communicate with leJOS NXJ programs from Android phones - see the <a href="http://www.lejos.org/nxt/nxj/tutorial/Android/Android.htm">Android</a> tutorial page.</p>
+				<p>Finally, leJOS NXJ programs can be distributed across multiple NXT bricks which can communicate with each other over Bluetooth or via RS485 
+				communication using NXT cables linking port 4 of two or more NXT bricks. Oh, and NXT programs can also communicate with external devices
+				such as Bluetooth GPS Receivers. This is all described in <a href="http://www.lejos.org/nxt/nxj/tutorial/Communications/Communications.htm">Communications</a> tutorial page.</p>
+				
+				<p>We shall start, however, with writing programs that run on the NXT brick. You can either compile and run your programs using the leJOS NXJ command line tools or you can use an Integrated Development Environment (IDE).</p>
+
+				<p>While command line tools are very useful, programming for leJOS NXJ is best done using an IDE. IDEs have
+				syntax-directed editors that immediately show you any syntax errors in your program, rather than waiting until you compile the
+				program and then showing a list of errors. This, together with color coding of the source, automatic formatting of the code,
+				prompting for method names and signatures, expanding and collapsing parts of your program, and many other editing features,
+				makes creating your program a much faster and more enjoyable experience. But the advantages of the IDE do not end there: they
+				also help you with creating and building projects, debugging, generating documentation, and creating user interfaces. Java IDEs
+				put all the Sun Java tools and a variety of third-party tools at your fingertips. They make supporting new tools simple, either by
+				use of plug-ins or by integration of external tools.</p>
+				<p>IDEs are easy to set up and use and you should use them for all your leJOS programming – even
+				the simplest of projects. Any type of leJOS NXJ program can be created using an IDE.</p>
+				
+				<p>You can produce leJOS NXJ programs with any Java IDE. This tutorial currently has sections on how to use two of the most popular Jave IDEs: Eclipse and Netbeans.
+				leJOS NXJ supports plugins for these two IDEs which makes writing and testing your programs even simpler.</p>
+				
+				<p>To learn how to create, compile and run your programs from an Integrated Development Environment,
+				go to one of the following page:</p>
+				<ul class="BlueArrows">
+					<li><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/UsingIDEs.htm">Using a Java IDE with leJOS</a></li>
+				</ul>	
+				
+				<p>This section of the tutorial will teach you how to use the command line tools. If you decide to use the command
+				line tools you can write your program using the editor of your choice. Many programmer's editors will let you invoke
+				the tools directly from the editor.</p>
+				
+				<p>Another option you can use to compile and run your leJOS NXJ programs is to use <em>ant</em> build scripts. ant
+				build scripts are usually used from an IDE. Netbeans does all compiling and building of programs using ant, and it is
+				an option in Eclipse. However, you can also use ant from the command line. ant build scripts are provided for all the leJOS NXJ samples.
+				To run ant build scripts you just change directory to the directory containing the build.xml file and type <em>ant</em>.
+				</p>
+				
+				<p>The scripts described in the following sections are Windows .bat files or Unix shell scripts, depending on
+				which operating system you are using. They set up the class path, library path and boot class path needed by leJOS NXJ
+				and then call a Java class that does all the work. The exception to this is <em>nxjc</em> which just calls <em>javac</em>.
+				Note that ant build scripts use the same underlying Java classes, but do not use the scripts.</p>
+				
+				<!-- WEB TOOL TO GO TO TOP OF THE DOCUMENT -->
+				<a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a>
+				<p>
+				
+				<a name="1"></a>
+				</p><h4>Using the leJOS NXJ command line tools</h4>
+								
+				<p>leJOS uses the standard Sun Java compiler for compiling programs. However, it needs to replace the standard Java library
+				   with leJOS's own version of this - classes.jar. For this reason we provide a command called <em>nxjc</em> that sets the boot class path to classes.jar. Its parameter
+				   are the same as those as <em>javac</em></p>
+				   
+				<p>leJOS NXJ programs are different from normal Java programs in that they do not support dynamic class loading. Instead all
+				the classes used in the program are collected together and packaged
+				in a binary file with a .nxj extension. This process is referred
+				to as linking. The linked binary is then uploaded to the NXT.</p>
+
+				<p>The tools for compiling, linking and uploading leJOS NXJ programs are:</p>
+				<ul class="BlueArrows">
+					<li>nxjc</li>
+					<li>nxjlink</li>
+					<li>nxjupload</li>
+					<li>nxj</li>
+				</ul>
+				<p>Note that you normally only need to use the <code>nxjc</code> and <code>nxj</code> commands,
+				   as <code>nxj</code> does the equivalent of <code>nxjlink</code> followed by <code>nxjupload</code>.</p>
+				<p>You need to open a command window to run these commands.</p>
+				
+				<a name="2"></a>
+				<h5>nxjc – compile a program</h5>
+				<p>Compiles one or more java files.</p>
+				<p>Usage: nxjc &lt;java-files&gt;</p>
+				<p>Example: </p>
+				<code>nxjc HelloWorld.java</code>
+				<p>nxjc calls javac with parameters:</p>
+				<ul class="BlueArrows">
+					<li>-bootclasspath &lt;path to classes.jar&gt;</li>
+					<li>&lt;java-files&gt;</li>
+				</ul>
+				<p>-bootclasspath is set because leJOS does not use the standard java.lang classes
+						but has its own versions in classes.jar.</p>
+						
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+		
+				<a name="3"></a>
+				<h5>nxjlink – link a program</h5>
+				<p>Calls the leJOS NXJ linker.</p>
+				<p>Usage:  nxjlink [-v|--verbose] [-g|--debug] [-gr|--remotedebug] [-a|--all]
+				                   [-dm|--disablememcompaction] [-ea|--enableassertions]
+				                   [-ec|--enablechecks]
+				                   [-od|--outputdebug &lt;debug-file&gt; ] -o &lt;binary&gt; main-class</p>
+				<p>Example:</p>
+				<code>nxjlink -v -o HelloWorld.nxj HelloWorld</code>
+				<p>Links the specified main class with any
+						classes that it references in the current directory and with the
+						standard leJOS classes from classes.jar to produce a binary NXJ
+						program that can be uploaded and run.</p>
+				<p>The -v or --verbose flag
+						causes a list of class names and method signatures  included in the
+						binary   to be sent to the standard output. This output is extremely useful for debugging.</p>
+				<p>The -g or --debug flag causes a debug monitor to be included with the program. This allows the program
+				   to be interrupted while is running (by pressing ENTER+ESCAPE) and gives stack dumps when untrapped
+				   exceptions occur.</p>
+				<p>The -gr or --remotedebug flag is used to switch on remote debugging, which works with the nxjconsole
+				or nxjconsoleviewer tools.</p>
+				<p>The -od or --outputdebug flag is used to specify an output debug file, which is used by remote
+				   debugging and by nxjdebugtool.</p>
+				<p> The -ec or --enablechecks flag is used to enable additional run time
+                    checks. These checks are relatively expensive (and rarely generate
+                    errors) and so are off by default. Currently the only check that this
+                    setting enables is the testing for ArraystoreExceptions.</p>
+				<p>The -ea or --enableassertions flag is used to enable the checking of
+                   assert statements with the program.</p>
+				<p>The -dm or --disablememcompactions flag is used to disable memory
+                   compaction. Normally the leJOS garbage collector will attempt to move
+                   large objects in memory to maximise the amount of contiguous free
+                   space, this option disables this feature.</p>
+				<p>The linker removes methods that are
+						not used. Specify -a or --all to include all  methods
+						whether they are used or not. This should never be necessary.</p>
+				<p>Use the -h or --help flag to print out the options.</p>
+
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+				
+				<a name="4"></a>
+				<h5>nxjupload – upload a program</h5>
+				<p>Usage: nxjupload [-b|--bluetooth] [-u|--usb] [-d|--address address] [-n|--name name]  [-r|--run]	&lt;binary&gt;</p>
+				<p>Example:</p>
+				<p>nxjupload HelloWorld.nxj</p>
+				<p>Uploads the binary (.nxj) file. By default USB is tried first and then Bluetooth. If the --bluetooth
+					flag is specified, only Bluetooth is tried. If --usb is specified, only USB
+					is tried.</p>
+				<p>When Bluetooth is used, a search
+					for Bluetooth devices is done, unless the -address flag is
+					set, when a device with the given address is connected to.</p>
+				<p>The --name parameter limits
+					the search for a NXT with the given name. If this is not
+					specified, nxjupload tries to connect to each NXT that it finds
+					and will upload to the first NXT that is successfully connects to.</p>
+				<p>If the --run parameter is
+					specified, the program is run after it has been uploaded.</p>
+		
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+				
+				<a name="5"></a>
+				<h5>nxj – link, upload and run a program</h5>
+				<p>Usage: nxj [options] main-class</p>
+				<p>Example:	</p>
+				<code>nxj -r HelloWorld</code>
+				<p> The nxj command links and uploads a leJOS NXJ program.
+				It is the equivalent of nxjlink followed by nxjupload.</p>
+			
+				<p>Any of the options for <code>nxjlink</code> and <code>nxjupload</code> can be specified.</p>
+				<p>The default binary name is &lt;main-class&gt;.nxj, e.g. Tune.nxj.</p>
+				
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+                 
+                <a name="6"></a>
+				<h4>Using PC API command line tools</h4>
+				<p>The tools for compiling and running leJOS PC API programs are:</p>
+				<ul class="BlueArrows">
+					<li>nxjpcc</li>
+					<li>nxjpc</li>
+				</ul>
+			 
+				<p>Reminder: If you are compiling or running a PC API program without using these tools, you need <code>pccomm.jar</code> and <code>bluecove.jar</code> (Linux users also need <code>bluecove-gpl</code>) in your CLASSPATH.
+				Note that <code>classes.jar</code> must NOT be part of the CLASSPATH for Java software that runs of the PC.
+				</p>
+				
+				<a name="7"></a>
+				<h5>nxjpcc – compile a PC API program for your pc</h5>
+				
+				<p>Compiles one or more PC API java files.</p>
+				<p>Usage: nxjpcc [javac-options] &lt;java-files&gt;</p>
+				<p>Example: </p>
+				<p><code>nxjpcc SensorTest.java</code></p>		 
+						
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+		
+				<a name="8"></a>
+				<h5>nxjpc – run a PC API program on your pc</h5>
+				<p>Usage: nxjpc [java-options] &lt;main-class&gt;</p>
+				<p>Calls java to run your PC API program.</p>
+				<p>Example:</p>
+				<p><code>nxjpc SensorTest</code></p>
+				
+				<p><a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/CompileAndRun.htm#top">Back to top</a></p>
+                 
+				<!-- END CONTENT AREA -->
+
+				<!-- NAVIGATION TOOL -->				
+        		<div class="NavBit">
+               		<a target="_top" href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/FirstProgram.htm">«&nbsp;Previous</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/index.htm">TOC</a>&nbsp;•&nbsp;<a href="http://www.lejos.org/nxt/nxj/tutorial/Preliminaries/UsingIDEs.htm">Next&nbsp;»</a>
+        		</div>
+				<br>
+			</td>
+		</tr>
+	</tbody></table>
+
+<div><div id="SL_button" class="ImTranslatorLogo" style="display: none; background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/imtranslator-s.png);"></div><div id="SL_shadow_translation_result2" style="display: none;"></div><div id="SL_shadow_translator" style="display: none;"><div id="SL_planshet" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg2.png) rgb(244, 245, 245);"><div id="SL_TB"><div id="bubblelogo" class="ImTranslatorLogo" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/imtranslator-s.png);"></div><table cellspacing="1" border="0" id="SL_tables"><tbody><tr><td class="SL_td" align="right" width="10%"><input id="SLloc" type="checkbox" title="Lock-in language"></td><td class="SL_td" align="left" width="20%"><select id="SL_lng_from"><option selected="" value="auto">Detect language</option><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Belarusian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-CN">Chinese&nbsp;(Simp)</option><option value="zh-TW">Chinese&nbsp;(Trad)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian&nbsp;Creole</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="kn">Kannada</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="ms">Malay</option><option value="mt">Maltese</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option></select></td><td class="SL_td" align="center" width="3"><div id="SL_switch" title="Switch languages" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/switchb.png);"></div></td><td class="SL_td" align="left" width="20%"><select id="SL_lng_to"><option value="af">Afrikaans</option><option value="sq">Albanian</option><option value="ar">Arabic</option><option value="hy">Armenian</option><option value="az">Azerbaijani</option><option value="eu">Basque</option><option value="bn">Bengali</option><option value="be">Belarusian</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-CN">Chinese&nbsp;(Simp)</option><option value="zh-TW">Chinese&nbsp;(Trad)</option><option value="hr">Croatian</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en">English</option><option value="eo">Esperanto</option><option value="et">Estonian</option><option value="tl">Filipino</option><option value="fi">Finnish</option><option value="fr">French</option><option value="gl">Galician</option><option value="ka">Georgian</option><option value="de">German</option><option value="el">Greek</option><option value="gu">Gujarati</option><option value="ht">Haitian&nbsp;Creole</option><option value="iw">Hebrew</option><option value="hi">Hindi</option><option value="hu">Hungarian</option><option value="is">Icelandic</option><option value="id">Indonesian</option><option value="ga">Irish</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="kn">Kannada</option><option value="ko">Korean</option><option value="lo">Lao</option><option value="la">Latin</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="mk">Macedonian</option><option value="ms">Malay</option><option value="mt">Maltese</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sr">Serbian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option selected="" value="es">Spanish</option><option value="sw">Swahili</option><option value="sv">Swedish</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="vi">Vietnamese</option><option value="cy">Welsh</option><option value="yi">Yiddish</option></select></td><td class="SL_td" width="13%" align="center">&nbsp;</td><td class="SL_td" width="8%" align="center"><div id="SL_TTS_voice" title="Listen to the translation" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/tts-voice.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_copy" title="Select text" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/copy_hand.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_bbl_font_patch" onclick="alert(&#39;Not available for dictionary&#39;);"></div><div id="SL_bbl_font" title="Font size" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/font-off.png);"></div></td><td class="SL_td" width="8%" align="center"><div id="SL_TH" title="Translation history" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/history.png);"></div></td><td class="SL_td" width="5%"></td><td class="SL_td" width="8%" align="right"><div id="SL_pin" title="Pin pup-up bubble" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/pin-off.png);"></div></td></tr></tbody></table></div></div><div id="SL_shadow_translation_result" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg.png) rgb(255, 255, 255);"></div><div id="SL_bbl_donate" title="Make a small contribution" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/donate2.png);"></div><div id="SL_Balloon_options" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg3.png) rgb(244, 245, 245);"><a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/options-bbl.html" target="_blank" class="SL_options" title="Show options">Options</a>&nbsp;:&nbsp;<a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/history.html" class="SL_options" title="Translation history" target="_blank">History</a>&nbsp;:&nbsp;<a href="http://about.imtranslator.net/tutorials/presentations/imtranslator-for-chrome/chrome-bubble-translator/" target="_blank" class="SL_options" title="ImTranslator Help">Help</a>&nbsp;:&nbsp;<a href="chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/feedback.html" class="SL_options" title="Feedback" target="_blank">Feedback</a></div><div id="SL_player"></div><div id="SL_alert100" style="background: url(chrome-extension://noaijdpnepcgjemiklgfkcfbkokogabh/img/util/bg2.png);">Text-to-speech function is limited to 100 characters</div></div></div><iframe src="./Compiling and Running Programs_files/userData.html" style="position: absolute; top: -100px; left: -100px; z-index: -10; border: none; visibility: hidden; width: 1px; height: 1px;"></iframe><iframe src="./Compiling and Running Programs_files/register_server_layer.html" style="position: absolute; width: 1px; height: 1px; left: -100px; top: -100px; visibility: hidden;"></iframe><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg></body></html>

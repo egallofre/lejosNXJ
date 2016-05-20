@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;AndroidBT&apos;&#x0D;&#x0A;- Original project: &apos;AndroidBT&apos;&#x0D;&#x0A;- Original element: &apos;edu.soft.conectarBT.java&apos;" description="Delete element" element1="/src&lt;edu.soft{conectarBT.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1424971508928" subPackages="false" version="1.0"/>
+</session>
